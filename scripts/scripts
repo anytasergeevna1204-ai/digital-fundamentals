@@ -1,3 +1,4 @@
+скрипт 1
 #!/bin/bash
 
 min=100; max=-1
@@ -15,3 +16,26 @@ done
 done
 echo $min
 echo $max
+
+скрипт 2
+#!/bin/bash
+
+for i in $(ls $1)
+do
+for j in $(cat $1$i)
+do
+age=$(echo $j | cut -d ":" -f2)
+if [ $fge -ge 18]
+then
+teen=$((teen+1))
+#echo $teen
+#echo $age
+else
+noteen=$((noteen+1))
+fi
+#echo $teen
+done
+
+done
+echo $teen
+echo $noteen
